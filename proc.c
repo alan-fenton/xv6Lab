@@ -326,17 +326,25 @@ scheduler(void)
   struct proc *p;
   struct cpu *c = mycpu();
   c->proc = 0;
-  
+  int k;
   for(;;){
     // Enable interrupts on this processor.
     sti();
 
     // Loop over process table looking for process to run.
     acquire(&ptable.lock);
+    //The following bits of work are a collaboration of Wesley and AJ
+
+    k=40; //K is now outside of the possible range of nice values
+    for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
+      if((p->state == RUNNABLE) && p->nice < k)
+	k=p->nice; //This finds the highest priority among runnable processes.
+    }
     for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
       if(p->state != RUNNABLE)
         continue;
-
+      if(p->nice > k)
+	continue; //This avoids scheduling a process with a lower priority
       // Switch to chosen process.  It is the process's job
       // to release ptable.lock and then reacquire it
       // before jumping back to us.

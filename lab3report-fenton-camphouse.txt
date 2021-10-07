@@ -4,3 +4,71 @@ init	1	SLEEPING	10
 sh	2	SLEEPING	10
 ps	3	RUNNING		10
 
+
+$ lab3test 4 &
+$ PCahreintl d 5 6cr ecarteiantge dc
+hild 6
+Parent 5 creating child 7
+Parent 5 creating child 8
+Parent 5 creating child 9
+Child Child 87 Ccreated
+ created
+hzombie!
+ild 9 created
+ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+lab3test		6	RUNNABLE	20
+ps		10	RUNNING		10
+lab3test		7	RUNNABLE	20
+lab3test		8	RUNNABLE	20
+lab3test		9	RUNNING		20
+$ set_priority 6 18
+$ ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+lab3test		6	RUNNING		18
+ps		12	RUNNING		10
+lab3test		7	RUNNABLE	20
+lab3test		8	RUNNABLE	20
+lab3test		9	RUNNABLE	20
+
+
+
+
+$ ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+ps		22	RUNNING		10
+lab3test		10	SLEEPING	10
+lab3test		5	SLEEPING	10
+lab3test		7	SLEEPING	10
+lab3test		8	RUNNABLE	20
+lab3test		9	RUNNING		20
+lab3test		11	RUNNABLE	20
+$ ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+ps		23	RUNNING		10
+lab3test		10	SLEEPING	10
+lab3test		5	SLEEPING	10
+lab3test		7	SLEEPING	10
+lab3test		8	RUNNABLE	20
+lab3test		9	RUNNABLE	20
+lab3test		11	RUNNING		20
+$ ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+ps		24	RUNNING		10
+lab3test		10	SLEEPING	10
+lab3test		5	SLEEPING	10
+lab3test		7	SLEEPING	10
+lab3test		8	RUNNING		20
+lab3test		9	RUNNABLE	20
+lab3test		11	RUNNABLE	20
+
