@@ -78,9 +78,7 @@ lab3test		11	RUNNABLE	20
 
 
 
-Here begins the section for exercise 5
-
-
+Exercise 5
 $ ps
 name		pid	state		priority
 init		1	SLEEPING	10
@@ -174,4 +172,7 @@ $ set_priority 9 9
 
 ps
 QEMU: Terminated
-
+For Exercise 5, we first ran the command:
+lab3test &
+three times. The reason we could not run it as "lab3test 4 &" is because if we had the wait call added in a previous exercise would cause the second and third children to not be created until the first child returned.
+Then we examined the priority several times. At first, it was running a different instance of the process, at random, but then after the set_priority command is executed, the process with pid 11 and priority 19 is running each time that the ps command is executed, this is because it is the runnable process with the highest priority. Note that with Priority 19, it is selected after ps is selected, which suggests that there are 2 cores for the virtual processor. Then, as an experiment, we changed two processes to have priority 9, so that they are higher priority than the system calls. This causes the system to lock up and become non-responsive, which confirms the earlier theory that xv6 runs with two cpus.
