@@ -2,5 +2,7 @@ ESTIMATE of time to complete: 20 hours
 
 Date        Start Time  Time Spent  Lab Part       Work Completed
 10/4/2021   9:30        1:15        0              Setup Git
-10/5/2021   ~		~	    1		   
+10//2021    6:38        2:15        *              Everything else       
 ----------------------------------------------------------------------------------------------
+Grand Total - 3:30
+Difficulties encountered in this lab were mostly related to the scheduler function and it's relative complexity. There are several functions called in the scheduler which are not intuitive to understand. While changing the scheduler did not require understanding those functions, it was difficult to figure out what purpose those functions served. 
