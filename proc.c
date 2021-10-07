@@ -198,7 +198,7 @@ fork(void)
   }
   np->sz = curproc->sz;
   np->parent = curproc;
-  np->nice = curproc->nice;
+  np->nice = 20;
   *np->tf = *curproc->tf;
 
   // Clear %eax so that fork returns 0 in the child.
