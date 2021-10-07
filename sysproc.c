@@ -89,3 +89,10 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+//Get processes
+int
+sys_cps(void)
+{
+  return cps();
+}//Function added Oct 6th
