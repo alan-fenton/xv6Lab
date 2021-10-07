@@ -30,3 +30,4 @@ SYSCALL(sbrk)
 SYSCALL(sleep)
 SYSCALL(uptime)
 SYSCALL(cps) //added Oct 6th
+SYSCALL(set_priority) //Added by Wesley

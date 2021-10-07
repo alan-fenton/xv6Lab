@@ -2,4 +2,6 @@ ESTIMATE of time to complete: 8 hours
 
 Date        Start Time  Time Spent  Lab Part       Work Completed
 10/1/2021   3:16        15          0              Read assignment details
+10/4/2021   9:30        1:10        0              Figuring out git
+10/6/2021   6:38
 ----------------------------------------------------------------------------------------------

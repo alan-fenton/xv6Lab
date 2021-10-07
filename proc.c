@@ -551,3 +551,31 @@ cps()
 	release(&ptable.lock);
 	return 22;
 }
+//Wesley added this function
+//The actual code for setting the processes nice value
+//Return 0 on success, -1 on failure
+int
+set_priority(int pid, int priority)
+{
+   //Find the actual nice value, error check it
+   if (priority < 0)
+      priority = 0;
+   if (priority > 39)
+      priority = 39;
+
+   struct proc *p;
+
+   //Get the lock and find the process in question
+   acquire(&ptable.lock);
+   //Loop until we find the target
+   for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
+      if(p->pid == pid){
+         p->nice = priority; //Change the nice value
+         release(&ptable.lock);
+         return 0;
+      }
+   }
+
+   release(&ptable.lock);
+   return -1;
+}
