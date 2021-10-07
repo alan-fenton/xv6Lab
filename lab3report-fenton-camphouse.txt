@@ -1,0 +1,6 @@
+$ ps
+name	pid	state		priority
+init	1	SLEEPING	10
+sh	2	SLEEPING	10
+ps	3	RUNNING		10
+

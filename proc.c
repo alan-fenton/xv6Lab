@@ -539,12 +539,12 @@ cps()
 	struct proc * p;
 	sti();
 	acquire(&ptable.lock);
-	cprintf("name\tpid\tstate\tpriority\n");
+	cprintf("name\tpid\tstate\t\tpriority\n");
 	for(p=ptable.proc; p < &ptable.proc[NPROC]; p++){
 		if(p->state == SLEEPING)
 			cprintf("%s\t%d\tSLEEPING\t%d\n", p->name, p->pid, p->nice);
 		else if(p->state == RUNNING)
-			cprintf("%s\t%d\tRUNNING\t%d\n", p->name, p->pid, p->nice);
+			cprintf("%s\t%d\tRUNNING\t\t%d\n", p->name, p->pid, p->nice);
 		else if(p->state == RUNNABLE)
 			cprintf("%s\t%d\tRUNNABLE\t%d\n", p->name, p->pid, p->nice);
 	}
