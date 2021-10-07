@@ -3,5 +3,17 @@ ESTIMATE of time to complete: 8 hours
 Date        Start Time  Time Spent  Lab Part       Work Completed
 10/1/2021   3:16        15          0              Read assignment details
 10/4/2021   9:30        1:10        0              Figuring out git
-10/6/2021   6:38
+10/6/2021   6:38        2:15        *              The rest of the assignment
 ----------------------------------------------------------------------------------------------
+                                                   Total Time: 3:40
+
+Overall, this lab was not terribly difficult, taking significantly less time
+than I had estimated. The most difficult thing we encountered was trying to
+fully understand how the scheduler worked, as there were a few strange functions
+used that weren't entirely obvious in what they were doing. However, this still
+proved to not be terribly difficult.
+Through experimentation, we found that the operating system has 2 CPU's. We
+found this out because we set one of the lab3test processes to have a nice value
+of 9, higher than the system calls, but we were still able to use ps. However,
+when the nice value of a second lab3test process was set to 9, we were unable
+to use the system calls as the processor was hogged by the lab3test processes.

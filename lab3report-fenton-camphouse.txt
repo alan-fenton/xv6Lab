@@ -75,6 +75,10 @@ lab3test		8	RUNNING		20
 lab3test		9	RUNNABLE	20
 lab3test		11	RUNNABLE	20
 
+Through the different ps commands, you can see how the different lab3test
+processes switch who is running. In the first command the one with pid 9 was
+running, then the one with pid 11, and finally the one with pid 8.
+
 
 
 
