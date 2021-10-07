@@ -72,3 +72,103 @@ lab3test		8	RUNNING		20
 lab3test		9	RUNNABLE	20
 lab3test		11	RUNNABLE	20
 
+
+
+
+Here begins the section for exercise 5
+
+
+$ ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+ps		19	RUNNING		10
+lab3test		10	SLEEPING	10
+lab3test		5	SLEEPING	10
+lab3test		7	SLEEPING	10
+lab3test		8	RUNNABLE	20
+lab3test		9	RUNNABLE	20
+lab3test		11	RUNNING		19
+$ ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+ps		20	RUNNING		10
+lab3test		10	SLEEPING	10
+lab3test		5	SLEEPING	10
+lab3test		7	SLEEPING	10
+lab3test		8	RUNNABLE	20
+lab3test		9	RUNNABLE	20
+lab3test		11	RUNNING		19
+$ ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+ps		21	RUNNING		10
+lab3test		10	SLEEPING	10
+lab3test		5	SLEEPING	10
+lab3test		7	SLEEPING	10
+lab3test		8	RUNNABLE	20
+lab3test		9	RUNNABLE	20
+lab3test		11	RUNNING		19
+$ ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+ps		22	RUNNING		10
+lab3test		10	SLEEPING	10
+lab3test		5	SLEEPING	10
+lab3test		7	SLEEPING	10
+lab3test		8	RUNNABLE	20
+lab3test		9	RUNNABLE	20
+lab3test		11	RUNNING		19
+$ ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+ps		23	RUNNING		10
+lab3test		10	SLEEPING	10
+lab3test		5	SLEEPING	10
+lab3test		7	SLEEPING	10
+lab3test		8	RUNNABLE	20
+lab3test		9	RUNNABLE	20
+lab3test		11	RUNNING		19
+$ ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+ps		24	RUNNING		10
+lab3test		10	SLEEPING	10
+lab3test		5	SLEEPING	10
+lab3test		7	SLEEPING	10
+lab3test		8	RUNNABLE	20
+lab3test		9	RUNNABLE	20
+lab3test		11	RUNNING		19
+$ ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+ps		25	RUNNING		10
+lab3test		10	SLEEPING	10
+lab3test		5	SLEEPING	10
+lab3test		7	SLEEPING	10
+lab3test		8	RUNNABLE	20
+lab3test		9	RUNNABLE	20
+lab3test		11	RUNNING		19
+$ set_priority 11 9
+$ ps
+name		pid	state		priority
+init		1	SLEEPING	10
+sh		2	SLEEPING	10
+ps		27	RUNNING		10
+lab3test		10	SLEEPING	10
+lab3test		5	SLEEPING	10
+lab3test		7	SLEEPING	10
+lab3test		8	RUNNABLE	20
+lab3test		9	RUNNABLE	20
+lab3test		11	RUNNING		9
+$ set_priority 9 9
+
+ps
+QEMU: Terminated
+
