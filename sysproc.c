@@ -89,3 +89,18 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+//Wesley added this function
+//Calls set_priority, pulling arguments from the command line
+int
+sys_set_priority(void)
+{
+   int pid;
+   int priority;
+
+   //Get the inputs
+   argint(0, &pid);
+   argint(1, &priority);
+
+   return set_priority(pid, priority);
+}

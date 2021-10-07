@@ -23,6 +23,7 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+int set_priority(int pid, int priority); //Wesley added this
 
 // ulib.c
 int stat(const char*, struct stat*);
